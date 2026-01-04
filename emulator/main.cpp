@@ -120,9 +120,9 @@ int main(int argc, char** argv) {
     GameState end_state = game->getState();
     if(game_over) std::printf("Game Over!\n");
     std::printf("  Score:                       %f\n", end_state.score);
-    std::printf("  Total Ticks:                 %llu\n", end_state.total_ticks);
-    std::printf("  Last Iteration Clock Cycles: %llu\n", end_state.iteration_clock_cycles);
-    std::printf("  Total Clock Cycles:          %llu\n", end_state.total_clock_cycles);
+    std::printf("  Total Ticks:                 %lu\n", end_state.total_ticks);
+    std::printf("  Last Iteration Clock Cycles: %lu\n", end_state.iteration_clock_cycles);
+    std::printf("  Total Clock Cycles:          %lu\n", end_state.total_clock_cycles);
 
     return 0;
 }
