@@ -25,7 +25,7 @@
 int main(int argc, char** argv) {
     std::string rom_file;
     int board_width = 17;
-    int board_height = 21;
+    int board_height = 17;
     int initial_seed = 69;
     int fps = 5;
     bool play_mode = false;
