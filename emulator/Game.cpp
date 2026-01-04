@@ -76,8 +76,10 @@ bool Game::tick(Direction player_control) {
     GameVec2 tail_pos = state.snake[state.snake.size() - 1];
 
     // Move every bit of body forward
-    for(size_t i = state.snake.size()-1; i > 0; i--) {
-        state.snake[i] = state.snake[i-1];
+    if (state.snake.size() >= 2) {
+        for (size_t i = state.snake.size() - 1; i > 0; --i) {
+            state.snake[i] = state.snake[i - 1];
+        }
     }
 
     // Move head
