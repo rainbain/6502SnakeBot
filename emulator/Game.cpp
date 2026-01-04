@@ -38,11 +38,11 @@ void Game::newState() {
     // Place the first food
     spawnFood(new_state);
 
-    state.score = 0.0;
-    state.food_value = 0.0;
-    state.total_ticks = 0;
-    state.total_clock_cycles = 0;
-    state.iteration_clock_cycles = 0;
+    new_state.score = 0.0;
+    new_state.food_value = 0.0;
+    new_state.total_ticks = 0;
+    new_state.total_clock_cycles = 0;
+    new_state.iteration_clock_cycles = 0;
     
     setState(new_state);
 }
