@@ -12,7 +12,7 @@
  * The 6502 Emulator.
  */
 
-#include "emulator.h"
+#include "Emulator.h"
 
 #include <stdexcept>
 #include <iostream>
