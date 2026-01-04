@@ -18,6 +18,8 @@
 #include <memory>
 #include <string>
 
+#include <cinttypes>
+
 #include "Game.h"
 #include "GameRender.h"
 #include "Emulator.h"
@@ -120,9 +122,9 @@ int main(int argc, char** argv) {
     GameState end_state = game->getState();
     if(game_over) std::printf("Game Over!\n");
     std::printf("  Score:                       %f\n", end_state.score);
-    std::printf("  Total Ticks:                 %lu\n", end_state.total_ticks);
-    std::printf("  Last Iteration Clock Cycles: %lu\n", end_state.iteration_clock_cycles);
-    std::printf("  Total Clock Cycles:          %lu\n", end_state.total_clock_cycles);
+    std::printf("  Total Ticks:                 %" PRIu64 "\n", end_state.total_ticks);
+    std::printf("  Last Iteration Clock Cycles: %" PRIu64 "\n", end_state.iteration_clock_cycles);
+    std::printf("  Total Clock Cycles:          %" PRIu64 "\n", end_state.total_clock_cycles);
 
     return 0;
 }
