@@ -13,6 +13,12 @@ test: $(EMULATOR)
 	make -C $(ENTRIES)/$(ENTRY)
 	$(EMULATOR) --rom $(ENTRIES)/$(ENTRY)/$(ENTRY).bin
 
+.phony: debug
+debug: $(EMULATOR)
+	make -C $(ENTRIES)/$(ENTRY) clean
+	make -C $(ENTRIES)/$(ENTRY)
+	$(EMULATOR) --rom $(ENTRIES)/$(ENTRY)/$(ENTRY).bin	
+
 .phony: clean
 clean:
 	find $(ENTRIES) -type f -name "*.bin" -delete
